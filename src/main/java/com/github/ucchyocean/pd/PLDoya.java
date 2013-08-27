@@ -34,7 +34,7 @@ public class PLDoya extends JavaPlugin implements Listener {
     private String message;
     
     /**
-     * 
+     * プラグインが有効化されたときに呼び出されるメソッド
      * @see org.bukkit.plugin.java.JavaPlugin#onEnable()
      */
     @Override
@@ -52,23 +52,28 @@ public class PLDoya extends JavaPlugin implements Listener {
     }
     
     /**
+     * プレイヤーがコマンドを打った時に、実行される直前で呼び出されるメソッド
      * @param event 
      */
     @EventHandler
     public void onPlayerCommadPreprocess(PlayerCommandPreprocessEvent event) {
         
         Player player = event.getPlayer();
-        String command = event.getMessage().toLowerCase().trim();
+        String[] commands = event.getMessage().trim().split(" ");
         
-        if ( command.startsWith("/version") || 
-                command.startsWith("/ver") || 
-                command.startsWith("/about") ) {
+        if ( commands.length == 0 ) return;
+        
+        String command = commands[0];
+        
+        if ( command.equalsIgnoreCase("/version") || 
+                command.equalsIgnoreCase("/ver") || 
+                command.equalsIgnoreCase("/about") ) {
             if ( !player.hasPermission("bukkit.command.version") ) {
                 player.sendMessage(ChatColor.RED + message);
                 event.setCancelled(true);
             }
-        } else if ( command.startsWith("/plugins") || 
-                command.startsWith("/pl") ) {
+        } else if ( command.equalsIgnoreCase("/plugins") || 
+                command.equalsIgnoreCase("/pl") ) {
             if ( !player.hasPermission("bukkit.command.plugins") ) {
                 player.sendMessage(ChatColor.RED + message);
                 event.setCancelled(true);
