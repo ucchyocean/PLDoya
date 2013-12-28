@@ -16,6 +16,6 @@ PLドヤァ<br />
 
 ※ ライセンス：LGPLv3を適用します。ソースコードを流用する場合は、流用先にもLGPLv3を適用してください。
 
-※ 何かあったときの連絡先：<a href="https://twitter.com/ucchyocean">ツイッター</a>へ連絡ください。
+※ 何かあったときの連絡先：<a href="https://twitter.com/ucchy99">ツイッター</a>へ連絡ください。
 
 ※ ダウンロード：https://github.com/ucchyocean/PLDoya/blob/master/release/PLDoya_v011.zip?raw=true
