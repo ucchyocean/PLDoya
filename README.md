@@ -18,4 +18,4 @@ PLドヤァ<br />
 
 ※ 何かあったときの連絡先：<a href="https://twitter.com/ucchy99">ツイッター</a>へ連絡ください。
 
-※ ダウンロード：https://github.com/ucchyocean/PLDoya/blob/master/release/PLDoya_v011.zip?raw=true
+※ ダウンロード：https://github.com/ucchyocean/PLDoya/blob/master/release/PLDoya_v020.zip?raw=true

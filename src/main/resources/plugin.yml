@@ -1,16 +1,16 @@
-name: PLDoya
+name: ${project.name}
 main: com.github.ucchyocean.pd.PLDoya
-version: 0.1.1
+version: ${project.version}
 author: ucchy
-description: ( ・´ｰ・｀)ドヤァ...
+description: ${project.description}
 commands:
   pldoya:
-    description: ( ・´ｰ・｀)ドヤァ...
+    description: ${project.description}
     aliases: []
-    usage: ( ・´ｰ・｀)ドヤァ...
+    usage: ${project.description}
     permission: pldoya
-    permission-message: You don't have "<permission>" ( ・´ｰ・｀)ドヤァ...
+    permission-message: You don't have "<permission>" ${project.description}
 permissions:
   pldoya:
-    description: ( ・´ｰ・｀)ドヤァ...
+    description: ${project.description}
     default: true

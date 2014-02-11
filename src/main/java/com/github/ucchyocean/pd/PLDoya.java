@@ -65,6 +65,11 @@ public class PLDoya extends JavaPlugin implements Listener {
         
         String command = commands[0];
         
+        // コマンドプレフィックスが付いていたら削除する。
+        if ( command.startsWith("/bukkit:") ) {
+            command = command.replace("/bukkit:", "/");
+        }
+        
         if ( command.equalsIgnoreCase("/version") || 
                 command.equalsIgnoreCase("/ver") || 
                 command.equalsIgnoreCase("/about") ) {
