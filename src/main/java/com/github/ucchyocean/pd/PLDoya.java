@@ -40,9 +40,10 @@ public class PLDoya extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         
-        // versionコマンドとpluginsコマンドの権限を絞る
+        // versionコマンドとpluginsコマンド、helpコマンドの権限を絞る
         getServer().getPluginManager().addPermission(new Permission("bukkit.command.version", PermissionDefault.OP));
         getServer().getPluginManager().addPermission(new Permission("bukkit.command.plugins", PermissionDefault.OP));
+        getServer().getPluginManager().addPermission(new Permission("bukkit.command.help", PermissionDefault.OP));
         
         // イベントリスナー登録
         getServer().getPluginManager().registerEvents(this, this);
@@ -80,6 +81,12 @@ public class PLDoya extends JavaPlugin implements Listener {
         } else if ( command.equalsIgnoreCase("/plugins") || 
                 command.equalsIgnoreCase("/pl") ) {
             if ( !player.hasPermission("bukkit.command.plugins") ) {
+                player.sendMessage(ChatColor.RED + message);
+                event.setCancelled(true);
+            }
+        } else if ( command.equalsIgnoreCase("/help") || 
+                command.equalsIgnoreCase("/?") ) {
+            if ( !player.hasPermission("bukkit.command.help") ) {
                 player.sendMessage(ChatColor.RED + message);
                 event.setCancelled(true);
             }
